@@ -17,4 +17,9 @@ app.use(express.urlencoded({
 app.use(express.static("public")); // Serve static files from the 'public' directory}));
 app.use(cookieParser());
 
+//routes
+import userRoutes from './routes/users.routes.js';
+
+//route declaration
+app.use('/api/v1/users', userRoutes);
 export { app };
